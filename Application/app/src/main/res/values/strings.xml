@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">GroupProjectApplication</string>
+    <string name="display_name">Heart Monitor</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_home">Home</string>
+    <string name="title_recordings">Recordings</string>
+    <string name="title_device_settings">Device Settings</string>
+    <string name="title_download">Download</string>
+    <string name="title_manage_tags">Manage Tags</string>
+    <string name="title_delete">Delete</string>
+    <string name="title_delete_all">Delete All</string>
+    <string name="title_refresh">Refresh</string>
+    <string name="title_search">Search</string>
+    <string name="title_filter">Filter</string>
+    <string name="title_clear_filter">Clear Filter(s)</string>
+    <string name="title_sort">Sort</string>
+    <string name="add_tag_first_item">&lt;select tag&gt;</string>
+    <string name="title_sort_date_asc">Date/Time Asc</string>
+    <string name="title_sort_date_desc">Date/Time Desc</string>
+    <string name="title_filter_on_date">On</string>
+    <string name="title_filter_at_time">At</string>
+    <string name="title_filter_before_datetime">Before</string>
+    <string name="title_filter_after_datetime">After</string>
+    <string name="title_filter_none_datetime">None</string>
+    <string name="content_date_radio">Filter By Date:</string>
+    <string name="content_time_radio">Filter By Time:</string>
+    <string name="title_device_status_unknown">Status: ----</string>
+    <string name="title_device_status_connected">Status: Connected</string>
+    <string name="title_device_status_disconnected">Status: Disconnected</string>
+</resources>

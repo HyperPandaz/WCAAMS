@@ -1,0 +1,35 @@
+{
+  "size": 5,
+  "recordings": [
+    {
+      "id": "2001-11-11-1-1-11-11",
+      "date": [2001, 11, 1, 1, 11, 11],
+      "recording": "audio1.wav",
+      "tags": [{"tag": "unanalysed", "app": true}, {"tag": "resting", "app": false}]
+    },
+    {
+      "id": "2002-2-22-2-22-22",
+      "date": [2002, 2, 22, 2, 22, 22],
+      "recording": "audio2.wav",
+      "tags": [{"tag": "unanalysed", "app": true}]
+    },
+    {
+      "id": "2003-3-3-3-33-33",
+      "date": [2003, 3, 3, 3, 33, 33],
+      "recording": "audio3.wav",
+      "tags": [{"tag": "unanalysed", "app": true}]
+    },
+    {
+      "id": "2004-4-4-4-44-44",
+      "date": [2004, 4, 4, 4, 44, 44],
+      "recording": "audio4.wav",
+      "tags": [{"tag": "unanalysed", "app": true}]
+    },
+    {
+      "id": "2005-5-5-5-55-55",
+      "date": [2005, 5, 5, 5, 55, 55],
+      "recording": "audio5.wav",
+      "tags": [{"tag": "unanalysed", "app": true}]
+    }
+  ]
+}

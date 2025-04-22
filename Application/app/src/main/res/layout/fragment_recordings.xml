@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    tools:context=".home.HomeFragment"
+    android:id="@+id/recordings_fragment"
+    android:clickable="true">
+
+    <!-- tests to be removed -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recordings_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/recording_view_item" />
+
+    <Button
+        android:id="@+id/bTesting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/filter_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <FrameLayout
+            android:id="@+id/filter_mask"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/filter_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/design_default_color_surface"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_weight="3">
+
+            <RadioGroup
+                android:id="@+id/rgDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvDateRadio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/content_date_radio" />
+
+                <RadioButton
+                    android:id="@+id/rbNoneDate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="true"
+                    android:text="@string/title_filter_none_datetime" />
+
+                <RadioButton
+                    android:id="@+id/rbOnDate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="false"
+                    android:text="@string/title_filter_on_date" />
+
+                <RadioButton
+                    android:id="@+id/rbBeforeDate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="false"
+                    android:text="@string/title_filter_before_datetime" />
+
+                <RadioButton
+                    android:id="@+id/rbAfterDate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="false"
+                    android:text="@string/title_filter_after_datetime" />
+
+                <TextView
+                    android:id="@+id/tvDateDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="--/--/----" />
+
+                <Button
+                    android:id="@+id/bSetFilterDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Set Date" />
+
+            </RadioGroup>
+
+
+            <RadioGroup
+                android:id="@+id/rgTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/rgDate"
+                tools:layout_editor_absoluteX="-16dp">
+
+                <TextView
+                    android:id="@+id/tvTimeRadio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/content_time_radio" />
+
+                <RadioButton
+                    android:id="@+id/rbNoneTime"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="true"
+                    android:text="@string/title_filter_none_datetime" />
+
+                <RadioButton
+                    android:id="@+id/rbAtTime"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="false"
+                    android:text="@string/title_filter_at_time" />
+
+                <RadioButton
+                    android:id="@+id/rbBeforeTime"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="false"
+                    android:text="@string/title_filter_before_datetime" />
+
+                <RadioButton
+                    android:id="@+id/rbAfterTime"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="false"
+                    android:text="@string/title_filter_after_datetime" />
+
+                <TextView
+                    android:id="@+id/tvTimeDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="--:--" />
+
+                <Button
+                    android:id="@+id/bSetFilterTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Set Time" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/bFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:text="@string/title_filter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/graph_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/ivGraph"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            android:background="@color/design_default_color_background"
+            android:src="@drawable/baseline_error_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

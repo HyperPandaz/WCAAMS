@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--These IDs etc are for the icons at the bottom of the screen-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.groupprojectapplication.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_recordings"
+        android:name="com.example.groupprojectapplication.recordings.RecordingsFragment"
+        android:label="@string/title_recordings"
+        tools:layout="@layout/fragment_recordings" />
+
+    <fragment
+        android:id="@+id/navigation_device_settings"
+        android:name="com.example.groupprojectapplication.device_settings.DeviceSettingsFragment"
+        android:label="@string/title_device_settings"
+        tools:layout="@layout/fragment_device_settings" />
+</navigation>

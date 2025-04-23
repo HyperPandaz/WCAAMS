@@ -1,0 +1,222 @@
+1
+00:00:01,500 --> 00:00:03,000
+Our aim for this project was to design a
+
+2
+00:00:03,000 --> 00:00:06,900
+Wireless Cardiac Auscultation 
+and At-Home Monitoring System.
+
+3
+00:00:06,900 --> 00:00:10,300
+This includes a wearable device that 
+continuously records the user’s heart sounds 
+
+4
+00:00:10,300 --> 00:00:13,600
+and an accompanying application, where 
+the user would be able to interact with 
+
+5
+00:00:13,600 --> 00:00:16,000
+the received recordings.
+
+6
+00:00:17,200 --> 00:00:22,300
+The wireless device consists of a PETG 3D-printed 
+shell which encloses the battery along with 
+
+7
+00:00:22,300 --> 00:00:26,000
+the custom designed printed circuit board 
+where the overall size of the device was 
+
+8
+00:00:26,000 --> 00:00:30,500
+kept to a minimum with a 
+size of 5 x 7 x 2.6 centimetres.
+
+9
+00:00:30,500 --> 00:00:34,300
+The PCB houses all of the electronic
+components including a MEMS microphone and 
+
+10
+00:00:34,300 --> 00:00:36,600
+an ESP32 microcontroller with an antenna.
+
+11
+00:00:36,600 --> 00:00:41,500
+Designed for direct skin contact, the base of 
+the enclosure is made from a TPU plastic due to 
+
+12
+00:00:41,500 --> 00:00:45,500
+its hypoallergenic properties with a 
+cut out for the microphone.
+
+13
+00:00:45,500 --> 00:00:50,000
+The enclosure is held in a brace that ensures 
+the microphone maintains a constant contact 
+
+14
+00:00:50,000 --> 00:00:53,300
+with the skin to get the best audio quality 
+with reduced motion artifacts. 
+
+15
+00:00:53,300 --> 00:00:57,000
+The brace is designed to be worn with the 
+device for long periods of time while 
+
+16
+00:00:57,000 --> 00:01:00,200
+carrying out daily activities, 
+therefore must ensure the wearer’s 
+
+17
+00:01:00,200 --> 00:01:04,200
+comfort and device security.
+By using elastic bands and a buckle, 
+
+18
+00:01:04,200 --> 00:01:08,500
+the brace can accommodate a range of body 
+types and still maintain a secure tight fit. 
+
+
+19
+00:01:10,200 --> 00:01:13,600
+The device is placed on the user’s mitral 
+point from which it records the heart sounds.
+
+
+20
+00:01:13,600 --> 00:01:18,600
+These are sampled at a rate of 1 kHz for 
+10 seconds at a time using the MEMS microphone 
+
+21
+00:01:18,600 --> 00:01:20,300
+with a calibrated ADC.
+
+22
+00:01:20,300 --> 00:01:25,200
+The ESP32 microcontroller powering the device 
+is responsible for carrying out the recording 
+
+23
+00:01:25,200 --> 00:01:28,600
+and storage of the heart sounds on the device 
+then transferring them over to the application 
+
+24
+00:01:28,600 --> 00:01:31,000
+using Bluetooth Low Energy.
+
+25
+00:01:31,500 --> 00:01:36,600
+The application handles receiving communication 
+from the MCU, data storage, data processing, 
+
+26
+00:01:36,600 --> 00:01:38,200
+and user interaction.
+
+27
+00:01:38,400 --> 00:01:42,300
+The app features 3 sections each designed 
+to be as user friendly as possible with good 
+
+28
+00:01:42,300 --> 00:01:46,200
+object oriented programming practices 
+followed throughout, including the use of 
+
+29
+00:01:46,200 --> 00:01:48,400
+design patterns like observer and callback.
+
+30
+00:01:48,400 --> 00:01:52,400
+From the recordings screen the user can track 
+and manage all their recordings, including 
+
+31
+00:01:52,400 --> 00:01:56,000
+filtering, sorting, adding/viewing tags, and more.
+
+
+32
+00:01:56,000 --> 00:01:59,300
+From the device settings screen the user 
+can manage the connection with the physical 
+
+
+33
+00:01:59,300 --> 00:02:04,000
+device including connecting and disconnecting 
+and setting the recording mode.
+
+34
+00:02:04,000 --> 00:02:08,100
+In addition, a machine learning model runs in 
+a background thread of the application and 
+
+35
+00:02:08,100 --> 00:02:11,100
+analyses the recorded heart sounds 
+to categorise them as either 
+
+36
+00:02:11,100 --> 00:02:13,100
+normal, abnormal or unknown.
+
+37
+00:02:13,100 --> 00:02:18,100
+The machine learning model is trained on 
+data classified by expert cardiologists. 
+
+38
+00:02:18,100 --> 00:02:23,000
+It processes each received audio file and 
+transforms it into a mel-frequency spectrogram, 
+
+39
+00:02:23,000 --> 00:02:26,100
+which allows for the use of a 
+Convolutional Neural Network. 
+
+40
+00:02:26,100 --> 00:02:30,400
+These models are suited for identifying spatial
+patterns, such as heart sound abnormalities.
+
+41
+00:02:30,400 --> 00:02:35,000
+The model achieves an accuracy of 90% in 
+healthy and unhealthy classification when 
+
+42
+00:02:35,000 --> 00:02:40,500
+applied to unseen test sets, and around 75% 
+during real-world deployments. 
+
+43
+00:02:40,500 --> 00:02:43,300
+The project successfully met the aim of creating a 
+
+44
+00:02:43,300 --> 00:02:46,500
+Wireless Cardiac Auscultation
+and At-Home Monitoring System 
+
+45
+00:02:46,500 --> 00:02:50,000
+and managed to expand on its goal by 
+incorporating a machine learning model 
+
+46
+00:02:50,000 --> 00:02:52,500
+and a brace into the project.
